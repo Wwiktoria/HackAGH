@@ -28,7 +28,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Margin="20,10,430,65" Background="Transparent" BorderBrush="#FFF5E0E0">
+            <Button Margin="10,10,445,65" Background="Transparent" BorderBrush="#FFF5E0E0">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="360"/>
@@ -54,7 +54,7 @@
 
             <Border Background="#FF0A1046" CornerRadius="0,50,0,30" Margin="0,93,430,0" Grid.RowSpan="6" BorderThickness="0,1,1,0" BorderBrush="#FFFBF7F7">
                 <StackPanel>
-                    <Button x:Name="BtnTheft" Margin="10,10,10,148" Background="Transparent" Height="82" Grid.Row="2" Click="BtnTheft_Click">
+                    <Button x:Name="BtnTheft" Margin="10,50,10,40" Background="Transparent" Height="82" Grid.Row="2" Click="BtnTheft_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="360"/>
@@ -89,7 +89,7 @@
 
                         </Button.Resources>
                         <StackPanel>
-                            <Image Source="Images/Profile1.png" Width="103" Height="76" />
+                            <Image Source="Images/mapa.png" Width="103" Height="76" />
                         </StackPanel>
                     </Button>
 
@@ -122,10 +122,23 @@
 
             </Border>
 
-            <Label x:Name="lblLights"  HorizontalAlignment="Left" Height="64" Margin="169,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="259" Background="#FFEAE10F" Panel.ZIndex="-1"/>
-            <Image x:Name="imgLIghts" Source="Images/Lights.png" Margin="51,150,-51,10" Grid.RowSpan="2" Grid.Row="4" Visibility="Hidden"/>
-            <Image x:Name="imgUnlocked" Source="Images/unlocked1.png" Margin="82,24,26,24" Grid.Row="4" Visibility="Hidden"/>
-            <Image x:Name="imgTriangle" Source="Images/16.png" Margin="82,38,26,10" Grid.Row="3" Visibility="Hidden"/>
+            <Label x:Name="lblLights"  HorizontalAlignment="Left" Height="64" Margin="169,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="259" Background="#FFEAE10F" Panel.ZIndex="-1" Visibility="Visible"/>
+            
+            <Button x:Name="btnLights" Content="Button" HorizontalAlignment="Left" Height="104" Margin="184,46,0,0" Grid.Row="3" VerticalAlignment="Top" Width="244" Click="btnLights_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Lights.png" Stretch="Uniform" />
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnLocked" Content="Button" HorizontalAlignment="Left" Height="104" Margin="184,41,0,0" Grid.Row="4" VerticalAlignment="Top" Width="244" Click="btnLocked_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/unlocked1.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Content="Button" HorizontalAlignment="Left" Height="104" Margin="184,46,0,0" Grid.Row="5" VerticalAlignment="Top" Width="244">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+            </Button>
 
 
 

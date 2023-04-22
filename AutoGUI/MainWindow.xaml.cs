@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Packaging;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,7 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 using AutoClassLibrary;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace AutoGUI
 {
@@ -31,6 +35,7 @@ namespace AutoGUI
         {
             car = new Car("123", "abc", "name", 30, 40, new List<string>() {"123432567","120909123"});
             InitializeComponent();
+            SetBackgroundImage(imagePaths[0]);
         }
 
         private void BtnDiabetes_Click(object sender, RoutedEventArgs e)
@@ -48,8 +53,12 @@ namespace AutoGUI
                     Notify(num);
                 }
                 car.DiabetesAlert();
+                lblLights.Visibility= Visibility.Visible;
+                imgUnlocked.Visibility = Visibility.Visible;
+              
+                
             }
-
+            
             //MessageBox.Show("The state of the driver is worsening, you have 5 minutes to intervene");
             //car.DiabetesAlert();
         }
@@ -64,6 +73,9 @@ namespace AutoGUI
                 MessageBox.Show("Your car has been stopped. Be sure to contact the authorities");
                 (new Map(car)).ShowDialog();
             }
+            lblLights.Visibility = Visibility.Visible;
+            imgUnlocked.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnEmergency_Click(object sender, RoutedEventArgs e)
@@ -74,11 +86,62 @@ namespace AutoGUI
             }
             car.Emergency();
             MessageBox.Show("Your family members from emergency list have been informed about the emergency.");
+
+            lblLights.Visibility = Visibility.Visible;
+            imgUnlocked.Visibility = Visibility.Visible;
+            
         }
 
         private void BtnProfile_Click(object sender, RoutedEventArgs e)
         {
             car.UpdateReport();
         }
+
+        
+
+        private int currentImageIndex = 0;
+        private string[] imagePaths = {  ("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\lightsOff.png"),
+    ("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\loghtsON.png"),
+    ("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\Emergency.png") };
+        private string[] imagePaths1 = { "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\unlocked1.png",
+"C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\Locked.png"
+        };
+
+        private void SetBackgroundImage(string imagePath)
+        {
+            ImageBrush brush = new ImageBrush();
+            brush.ImageSource = new BitmapImage(new Uri(imagePath, UriKind.Relative));
+            brush.Stretch = Stretch.Uniform;
+            btnLights.Background = brush;
+        }
+
+        private void SetBackgroundImage1(string imagePath1)
+        {
+            ImageBrush brush = new ImageBrush();
+            brush.ImageSource = new BitmapImage(new Uri(imagePath1, UriKind.Relative));
+            brush.Stretch = Stretch.Uniform;
+            btnLocked.Background = brush;
+        }
+        private void btnLights_Click(object sender, RoutedEventArgs e)
+        {
+            // zmień obrazek tła przycisku
+            currentImageIndex++;
+            if (currentImageIndex >= imagePaths.Length)
+            {
+                currentImageIndex = 0;
+            }
+            SetBackgroundImage(imagePaths[currentImageIndex]);
+        }
+
+        private void btnLocked_Click(object sender, RoutedEventArgs e)
+        {
+            currentImageIndex++;
+            if (currentImageIndex >= imagePaths1.Length)
+            {
+                currentImageIndex = 0;
+            }
+            SetBackgroundImage1(imagePaths1[currentImageIndex]);
+        }
     }
-}
+    }
+
