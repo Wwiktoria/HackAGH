@@ -1,15 +1,20 @@
 using System.Text.RegularExpressions;
-using System.ComponentModel.DataAnnotations;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace AutoClassLibrary
 {
-    public class User
+    public class User:Model1
     {
         private string name;
         private string surname;
         private string telnr;
-        private string userEmail;
+        private string email;
         private string password;
         public static User SavedUser;
 
@@ -28,19 +33,18 @@ namespace AutoClassLibrary
             }
         }
         [Key]
-        public string UserEmail {
-            get { return userEmail; }
+        public string Email {
+            get { return email; }
             set {
                 //if(Regex.IsMatch(value, @"^([a-z]|\d)*@[a-z]*\.(com|pl)$"))
                 //{
                 //    email = value;
                 //}
                 //else { }
-                userEmail = value;
-            }
+                email = value;
+            } 
         }
         public string Password { get { return password; } set { password = value; } }
-
         public virtual List<Car> Cars { get; set; }
 
         public User(string name, string surname, string telnr, string email, string password)
@@ -48,7 +52,7 @@ namespace AutoClassLibrary
             Name = name;
             Surname = surname;
             Telnr = telnr;
-            UserEmail = email;
+            Email = email;
             Password = password;
         }
 
@@ -63,6 +67,23 @@ namespace AutoClassLibrary
         public void LogOut()
         {
 
+        }
+        public bool CheckIfExist()
+        {
+            return Users.Any(x => x.Email == this.Email);
+
+        }
+
+        public User CheckIfExistLogin(string email, string password)
+        {
+            SavedUser = Users.FirstOrDefault(x => (x.Email == email && x.Password == password));
+            return SavedUser;
+        }
+
+        public void SaveUserToBase()
+        {
+            Users.Add(this);
+            SaveChanges();
         }
 
     }
