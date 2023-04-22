@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\lenovo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\Simulation\\Simulation.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\Simulation\\Simulation.csproj",
       "projectName": "Simulation",
-      "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\Simulation\\Simulation.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\Simulation\\obj\\",
+      "projectPath": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\Simulation\\Simulation.csproj",
+      "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\Simulation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,8 +51,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -63,7 +62,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.32, 3.1.32]"
+            "version": "[3.1.23, 3.1.23]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
@@ -79,7 +78,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

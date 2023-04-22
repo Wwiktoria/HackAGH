@@ -153,12 +153,8 @@ namespace AutoClassLibrary
             }
             ShowLocalization();
         }
-        public void Diabetes(Car c)
+        public void DiabetesAlert()
         {
-            //wy�wietla na ekranie ostrze�enie �e co� si� dzieje z opaski
-            //popup
-            //zapytanie
-            //tak/nie, na odpowiedź 5min (sek)
             //je�li stan jest bardzo z�y to: 5min na zaznaczenie �e jest okej, inaczej:
             //lokalizacja
             //wysy�a powiadomienie do os�b z listy emergencyPersons
@@ -171,9 +167,9 @@ namespace AutoClassLibrary
             {
                 Notify(num);
             }
-            c.speed = 0;
-            c.doorsopen = true;
-            c.emergencyLights = true;
+            speed = 0;
+            doorsopen = true;
+            emergencyLights = true;
         }
 
         public void UpdateReport()

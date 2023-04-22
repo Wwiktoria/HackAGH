@@ -49,9 +49,15 @@
 
             </Border>
 
-            <Border Background="#FF0A1046" CornerRadius="0,50,0,30" Margin="0,93,0,0" Grid.RowSpan="6" BorderThickness="0,1,1,0" BorderBrush="#FFFBF7F7">
-                <StackPanel>
-                    <Button Margin="10,100,10,148" Background="Transparent" Height="82" Grid.Row="2" BorderBrush="Transparent">
+            <Border Background="#FF0A1046" CornerRadius="0,50,0,30" Margin="0,93,0,0" Grid.RowSpan="4" BorderThickness="0,1,1,0" BorderBrush="#FFFBF7F7">
+                <DockPanel>
+                    <Border Width="40" Height="40" Padding="3" CornerRadius="100"
+                            DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0">
+
+                        <Image Source="Images/Car break-in1.png" Margin="-4,504,-32,-534"/>
+
+                    </Border>
+                    <Button Margin="10,10,10,148" Background="Transparent" Height="82" Grid.Row="2" Click="Button_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="360"/>

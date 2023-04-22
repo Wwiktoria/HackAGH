@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
+using AutoClassLibrary;
 namespace AutoGUI
 {
     /// <summary>
@@ -19,9 +21,27 @@ namespace AutoGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        Car car;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //wy�wietla na ekranie ostrze�enie �e co� si� dzieje z opaski
+            //popup
+            //zapytanie
+            //tak/nie, na odpowiedź 5min (sek)
+            string message = "The state of the driver is worsening. Are you able to do it within 5 minutes?";
+            string title = "Diabetes Alert";
+            if(MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.No)
+            {
+                car.DiabetesAlert();
+            }
+
+            //MessageBox.Show("The state of the driver is worsening, you have 5 minutes to intervene");
+            //car.DiabetesAlert();
         }
     }
 }
