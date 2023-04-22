@@ -65,10 +65,7 @@ namespace AutoClassLibrary
 
         public void CapSpeed(double cap)
         {
-            if (speed > cap)
-            {
-                speed = cap;
-            }
+            Speed = cap;
             // temp
         }
 
@@ -126,7 +123,7 @@ namespace AutoClassLibrary
         }
         public void Notify(string num)
         {
-            Console.WriteLine($"Wys�ano powiadomienie na numer alarmowy {num} o godzinie {DateTime.Now}");
+            Console.WriteLine($"Send an emergency message {num} at {DateTime.Now.ToString("HH:mm:ss")}");
         }
         public void ShowLocalization()
         {
@@ -159,6 +156,9 @@ namespace AutoClassLibrary
         public void Diabetes(Car c)
         {
             //wy�wietla na ekranie ostrze�enie �e co� si� dzieje z opaski
+            //popup
+            //zapytanie
+            //tak/nie, na odpowiedź 5min (sek)
             //je�li stan jest bardzo z�y to: 5min na zaznaczenie �e jest okej, inaczej:
             //lokalizacja
             //wysy�a powiadomienie do os�b z listy emergencyPersons
@@ -185,7 +185,7 @@ namespace AutoClassLibrary
             StringBuilder sb = new StringBuilder();
             foreach(Raport raport in Reports)
             {
-                string rep = $"{raport.Log} at {raport.Data}";
+                string rep = $"{raport.Log} at {raport.Data.ToString("dd MMMM yyyy HH:mm:ss")}";
                 sb.AppendLine(rep);
             }
             File.WriteAllText(path, textFin.ToString());
