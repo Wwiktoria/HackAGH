@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\
 AutoGUI
 none
 false
 DEBUG;TRACE
-C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\App.xaml
-42121631895
+C:\Users\couch\source\repos\AutoApp\AutoGUI\App.xaml
+51249451047
 
-91920891449
-50-2133262363
-LogIn.xaml;Main.xaml;MainWindow.xaml;SignIn.xaml;
+10-468538851
+511720045409
+LogIn.xaml;Main.xaml;MainWindow.xaml;Map.xaml;SignIn.xaml;
 
-False
+True
 
