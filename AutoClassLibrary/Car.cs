@@ -68,6 +68,8 @@ namespace AutoClassLibrary
         public void CapSpeed(double cap)
         {
             Speed = cap;
+            string log = $"Speed cap has been set to {cap}";
+            Reports.Add(new Raport(log));
             // temp
         }
 
@@ -131,7 +133,7 @@ namespace AutoClassLibrary
         {
 
         }
-        public void Theft(Car c)
+        public void Theft()
         {
             //lokalizacja
             //zatrzymanie samochodu
@@ -139,10 +141,13 @@ namespace AutoClassLibrary
             //�wiat�a awaryjne ON
             //alarm
             ShowLocalization();
-            c.Speed = 0;
-            c.Doorsopen = true;
-            c.EmergencyLights = true;
-            c.Alarm = true;
+            Speed = 0;
+            Doorsopen = true;
+            EmergencyLights = true;
+            Alarm = true;
+            string log = $"Theft alert";
+            //at {DateTime.Now.ToString("yyyy-MM-dd, HH-mm-ss")}
+            Reports.Add(new Raport(log));
         }
         public void Emergency()
         {
@@ -155,6 +160,9 @@ namespace AutoClassLibrary
             //}
             //ta część kodu w window
             ShowLocalization();
+            string log = $"Emergency alert";
+            //at {DateTime.Now.ToString("yyyy-MM-dd, HH-mm-ss")}
+            Reports.Add(new Raport(log));
         }
         public void DiabetesAlert()
         {
@@ -174,6 +182,9 @@ namespace AutoClassLibrary
             speed = 0;
             doorsopen = true;
             emergencyLights = true;
+            string log = $"Diabetes alert";
+            //at {DateTime.Now.ToString("yyyy-MM-dd, HH-mm-ss")}
+            Reports.Add(new Raport(log));
         }
 
         public void UpdateReport()
@@ -188,7 +199,7 @@ namespace AutoClassLibrary
                 string rep = $"{raport.Log} at {raport.Data.ToString("dd MMMM yyyy HH:mm:ss")}";
                 sb.AppendLine(rep);
             }
-            File.WriteAllText(path, textFin.ToString());
+            File.WriteAllText(path, sb.ToString());
             //Raports.Clear(); //skoro nie dodajemy do sqla to nie trzeba czy�ci�
         }
 

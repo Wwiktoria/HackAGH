@@ -32,7 +32,7 @@ namespace AutoGUI
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnDiabetes_Click(object sender, RoutedEventArgs e)
         {
             //wy�wietla na ekranie ostrze�enie �e co� si� dzieje z opaski
             //popup
@@ -47,11 +47,36 @@ namespace AutoGUI
                     Notify(num);
                 }
                 car.DiabetesAlert();
-                Console.Write("abcd");
             }
 
             //MessageBox.Show("The state of the driver is worsening, you have 5 minutes to intervene");
             //car.DiabetesAlert();
+        }
+
+        private void BtnTheft_Click(object sender, RoutedEventArgs e)
+        {
+            string message = "Are you sure your car was stolen?";
+            string title = "Theft Alert";
+            if (MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                car.Theft();
+                MessageBox.Show("Your car has been stopped. Be sure to contact the authorities");
+            }
+        }
+
+        private void BtnEmergency_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (string num in car.EmergencyPeopleTel)
+            {
+                Notify(num);
+            }
+            car.Emergency();
+            MessageBox.Show("Your family members from emergency list have been informed about the emergency.");
+        }
+
+        private void BtnProfile_Click(object sender, RoutedEventArgs e)
+        {
+            car.UpdateReport();
         }
     }
 }
