@@ -1,0 +1,16 @@
+C:\Users\couch\source\repos\AutoApp\AutoGUI\bin\Debug\AutoGUI.exe.config
+C:\Users\couch\source\repos\AutoApp\AutoGUI\bin\Debug\AutoGUI.exe
+C:\Users\couch\source\repos\AutoApp\AutoGUI\bin\Debug\AutoGUI.pdb
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI.csproj.AssemblyReference.cache
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI.csproj.SuggestedBindingRedirects.cache
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\MainWindow.g.cs
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\App.g.cs
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI_MarkupCompile.cache
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI_MarkupCompile.lref
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\MainWindow.baml
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI.g.resources
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI.Properties.Resources.resources
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI.csproj.GenerateResource.cache
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI.csproj.CoreCompileInputs.cache
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI.exe
+C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\AutoGUI.pdb
