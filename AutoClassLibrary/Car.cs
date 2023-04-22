@@ -171,6 +171,7 @@ namespace AutoClassLibrary
             speed = 0;
             doorsopen = true;
             emergencyLights = true;
+
         }
 
         public void UpdateReport()
