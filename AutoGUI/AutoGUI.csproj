@@ -232,7 +232,7 @@
     <Resource Include="Images\Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Profile.png" />
+    <Resource Include="Images\Profile1.png" />
     <Resource Include="Images\Side car.png" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +242,9 @@
     <Resource Include="Images\10.png" />
     <Resource Include="Images\11.png" />
     <Resource Include="Images\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Car break-in1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

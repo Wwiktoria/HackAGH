@@ -36,19 +36,19 @@
                 <Border Width="40" Height="40" Padding="3" CornerRadius="100"
                             DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0">
                     
-                    <Image Source="Images/Car break-in.png" Margin="-4,370,-32,-400"/>
+                    <Image Source="Images/Car break-in1.png" Margin="-4,370,-32,-400"/>
 
                 </Border>
                 <Border Width="40" Height="40" Padding="3" CornerRadius="100"
                             DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0" >
 
-                    <Image Source="Images/Diabetes.png" Margin="-13,51,-39,-81" Grid.Row="2"/>
+                    <Image Source="Images/Diabetes.png" Margin="-12,155,-40,-185" Grid.Row="2"/>
 
                 </Border>
                     <Border Width="40" Height="40" Padding="3" CornerRadius="100"
                             DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0" >
 
-                        <Image Source="Images/Profile.png" Margin="-13,51,-39,-81" Grid.Row="2"/>
+                        <Image Source="Images/Profile1.png" Margin="-16,-364,-36,334" Grid.Row="2"/>
 
                     </Border>
                 </DockPanel>
