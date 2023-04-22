@@ -28,7 +28,7 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button Margin="20,10,430,65" Background="Transparent" BorderBrush="#FFF5E0E0">
+            <Button Margin="10,10,445,65" Background="Transparent" BorderBrush="#FFF5E0E0">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="360"/>
@@ -54,7 +54,7 @@
 
             <Border Background="#FF0A1046" CornerRadius="0,50,0,30" Margin="0,93,430,0" Grid.RowSpan="6" BorderThickness="0,1,1,0" BorderBrush="#FFFBF7F7">
                 <StackPanel>
-                    <Button x:Name="BtnTheft" Margin="10,10,10,148" Background="Transparent" Height="82" Grid.Row="2" Click="BtnTheft_Click">
+                    <Button x:Name="BtnTheft" Margin="10,50,10,40" Background="Transparent" Height="82" Grid.Row="2" Click="BtnTheft_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="360"/>
