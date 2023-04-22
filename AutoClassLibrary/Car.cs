@@ -30,7 +30,7 @@ namespace AutoClassLibrary
         private bool alarm;
         private bool doorsopen;
         private List<string> emergencyPeopleTel;
-        private List<Raport> raports;
+        private List<Raport> reports;
 
         [Key]
         public string Vin { get { return vin; } set { vin = value; } }
@@ -41,14 +41,15 @@ namespace AutoClassLibrary
         public bool EmergencyLights { get { return emergencyLights; } set { emergencyLights = value; } }
         public bool Alarm { get { return alarm; } set { alarm = value; } }
         public bool Doorsopen { get { return doorsopen; } set { doorsopen = value; } }
+        public virtual List<Raport> Raports { get; set; }
         public virtual User User { get; set; }
         public string UserEmail { get; set; }
         public List<string> EmergencyPeopleTel { get { return emergencyPeopleTel; } set { emergencyPeopleTel = value; } }
-        public List<Raport> Raports { get; set; }
+        public List<Raport> Reports { get { return reports; } set { reports = value; } }
 
         public Car()
         {
-            Raports = new List<Raport>();
+            Reports = new List<Raport>();
         }
         public Car(string vin, string regnum, string name):this()
         {
@@ -74,8 +75,8 @@ namespace AutoClassLibrary
         public void ToggleLights(EnumLights type)
         {
             lights = type;
-            //string log = $"Changed lights to {type}";
-            //Raports.Add(new Raport(log));
+            string log = $"Changed lights to {type}";
+            Reports.Add(new Raport(log));
 
         }
         public void ToggleEmergencyLights()
@@ -90,7 +91,7 @@ namespace AutoClassLibrary
             {
                 log = $"Turned emergency lights OFF";
             }
-            Raports.Add(new Raport(log));
+            Reports.Add(new Raport(log));
         }
 
         public void ToggleDoors()
@@ -105,8 +106,8 @@ namespace AutoClassLibrary
             {
                 log = $"Doors closed";
             }
-            Raports.Add(new Raport(log));
-            //dodaæ raport do sqla
+            Reports.Add(new Raport(log));
+            //dodaï¿½ raport do sqla
         }
         public void ToggleAlarm()
         {
@@ -120,12 +121,12 @@ namespace AutoClassLibrary
             {
                 log = $"Doors closed";
             }
-            Raports.Add(new Raport(log));
-            //dodaæ raport do sqla
+            Reports.Add(new Raport(log));
+            //dodaï¿½ raport do sqla
         }
         public void Notify(string num)
         {
-            Console.WriteLine($"Wys³ano powiadomienie na numer alarmowy {num} o godzinie {DateTime.Now}");
+            Console.WriteLine($"Wysï¿½ano powiadomienie na numer alarmowy {num} o godzinie {DateTime.Now}");
         }
         public void ShowLocalization()
         {
@@ -133,70 +134,62 @@ namespace AutoClassLibrary
         }
         public void Theft(Car c)
         {
+            //lokalizacja
+            //zatrzymanie samochodu
+            //otwieramy drzwi
+            //ï¿½wiatï¿½a awaryjne ON
+            //alarm
             ShowLocalization();
             c.Speed = 0;
             c.Doorsopen = true;
             c.EmergencyLights = true;
             c.Alarm = true;
-            //lokalizacja
-            //zatrzymanie samochodu
-            //otwieramy drzwi
-            //œwiat³a awaryjne ON
-            //alarm
         }
         public void Emergency()
         {
-            foreach(string num in EmergencyPeopleTel)
+            //wysyï¿½a powiadomienie do osï¿½b z listy emergencyPeople
+            //lokalizacja
+            //data godzina
+            foreach (string num in EmergencyPeopleTel)
             {
                 Notify(num);
             }
-            //wysy³a powiadomienie do osób z listy emergencyPeople
             ShowLocalization();
-            //lokalizacja
-            //data godzina
         }
         public void Diabetes(Car c)
         {
-            //wyœwietla na ekranie ostrze¿enie ¿e coœ siê dzieje z opaski
-            //jeœli stan jest bardzo z³y to: 5min na zaznaczenie ¿e jest okej, inaczej:
+            //wyï¿½wietla na ekranie ostrzeï¿½enie ï¿½e coï¿½ siï¿½ dzieje z opaski
+            //jeï¿½li stan jest bardzo zï¿½y to: 5min na zaznaczenie ï¿½e jest okej, inaczej:
             //lokalizacja
+            //wysyï¿½a powiadomienie do osï¿½b z listy emergencyPersons
+            //zatrzymanie samochodu
+            //ï¿½wiatï¿½a awaryjne ON
+            //otwieramy drzwi
+
             ShowLocalization();
-            //wysy³a powiadomienie do osób z listy emergencyPersons
             foreach(string num in EmergencyPeopleTel)
             {
                 Notify(num);
             }
             c.speed = 0;
-            //zatrzymanie samochodu
             c.doorsopen = true;
-            //otwieramy drzwi
             c.emergencyLights = true;
-            //œwiat³a awaryjne ON
         }
 
-        public void UpdateRaport()
+        public void UpdateReport()
         {
-            //dodanie obecnej listy do sqla
             string oldpath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location).ToString();
             string path = $"{Path.GetFullPath(Path.Combine(oldpath, @"..\..\..\"))}\\report.txt";
             File.WriteAllText(path, "");
             string textFin = "";
             StringBuilder sb = new StringBuilder();
-            foreach(Raport raport in Raports)
+            foreach(Raport raport in Reports)
             {
-                sb.AppendLine(raport.Log);
-                //if (textFin == "")
-                //{
-                //    textFin = raport.Log;
-                //}
-                //else
-                //{
-                //    textFin = string.Concat(textFin, "\n", raport.Log);
-                //}
-
+                string rep = $"{raport.Log} at {raport.Data}";
+                sb.AppendLine(rep);
             }
             File.WriteAllText(path, textFin.ToString());
-            //Raports.Clear(); //skoro nie dodajemy do sqla to nie trzeba czyœciæ
+            //Raports.Clear(); //skoro nie dodajemy do sqla to nie trzeba czyï¿½ciï¿½
         }
 
         public static void SaveXML(string name, Car c)
