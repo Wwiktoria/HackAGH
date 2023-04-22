@@ -74,8 +74,8 @@ namespace AutoClassLibrary
         public void ToggleLights(EnumLights type)
         {
             lights = type;
-            //string log = $"Changed lights to {type}";
-            //Raports.Add(new Raport(log));
+            string log = $"Changed lights to {type}";
+            Raports.Add(new Raport(log));
 
         }
         public void ToggleEmergencyLights()
@@ -133,50 +133,50 @@ namespace AutoClassLibrary
         }
         public void Theft(Car c)
         {
-            ShowLocalization();
-            c.Speed = 0;
-            c.Doorsopen = true;
-            c.EmergencyLights = true;
-            c.Alarm = true;
             //lokalizacja
             //zatrzymanie samochodu
             //otwieramy drzwi
             //œwiat³a awaryjne ON
             //alarm
+            ShowLocalization();
+            c.Speed = 0;
+            c.Doorsopen = true;
+            c.EmergencyLights = true;
+            c.Alarm = true;
         }
         public void Emergency()
         {
-            foreach(string num in EmergencyPeopleTel)
+            //wysy³a powiadomienie do osób z listy emergencyPeople
+            //lokalizacja
+            //data godzina
+            foreach (string num in EmergencyPeopleTel)
             {
                 Notify(num);
             }
-            //wysy³a powiadomienie do osób z listy emergencyPeople
             ShowLocalization();
-            //lokalizacja
-            //data godzina
         }
         public void Diabetes(Car c)
         {
             //wyœwietla na ekranie ostrze¿enie ¿e coœ siê dzieje z opaski
             //jeœli stan jest bardzo z³y to: 5min na zaznaczenie ¿e jest okej, inaczej:
             //lokalizacja
-            ShowLocalization();
             //wysy³a powiadomienie do osób z listy emergencyPersons
+            //zatrzymanie samochodu
+            //œwiat³a awaryjne ON
+            //otwieramy drzwi
+
+            ShowLocalization();
             foreach(string num in EmergencyPeopleTel)
             {
                 Notify(num);
             }
             c.speed = 0;
-            //zatrzymanie samochodu
             c.doorsopen = true;
-            //otwieramy drzwi
             c.emergencyLights = true;
-            //œwiat³a awaryjne ON
         }
 
         public void UpdateRaport()
         {
-            //dodanie obecnej listy do sqla
             string oldpath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location).ToString();
             string path = $"{Path.GetFullPath(Path.Combine(oldpath, @"..\..\..\"))}\\report.txt";
             File.WriteAllText(path, "");
@@ -184,16 +184,8 @@ namespace AutoClassLibrary
             StringBuilder sb = new StringBuilder();
             foreach(Raport raport in Raports)
             {
-                sb.AppendLine(raport.Log);
-                //if (textFin == "")
-                //{
-                //    textFin = raport.Log;
-                //}
-                //else
-                //{
-                //    textFin = string.Concat(textFin, "\n", raport.Log);
-                //}
-
+                string rep = $"{raport.Log} at {raport.Data}";
+                sb.AppendLine(rep);
             }
             File.WriteAllText(path, textFin.ToString());
             //Raports.Clear(); //skoro nie dodajemy do sqla to nie trzeba czyœciæ
