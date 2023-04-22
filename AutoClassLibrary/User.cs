@@ -5,7 +5,7 @@ public class User
     public string telnr;
 
     public string Name { get { return name; } set { name = value; } }
-    public string Surame { get { return surname; } set { surname = value; } }
+    public string Surname { get { return surname; } set { surname = value; } }
     public string Telrn
     {
         get { return telrn; }

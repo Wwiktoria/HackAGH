@@ -1,0 +1,2 @@
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.AssemblyReference.cache
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.CoreCompileInputs.cache
