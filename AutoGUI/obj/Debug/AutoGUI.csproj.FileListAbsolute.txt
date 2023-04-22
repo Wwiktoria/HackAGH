@@ -234,3 +234,5 @@ C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\Main.g.cs
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\Main.baml
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\LogIn.g.cs
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\SignIn.g.cs
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\LogIn.baml
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\SignIn.baml

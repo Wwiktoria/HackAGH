@@ -127,7 +127,7 @@
                         FontFamily="Fonts/#Dosis"
                         FontWeight="Bold"
                         Text="Password"
-                        GotFocus="TextBox_GotFocus"
+                        
                         FontSize="30"
                         Width="300"
                         Grid.Row="4"
@@ -151,7 +151,7 @@
                         FontFamily="Fonts/#Dosis"
                         FontWeight="Bold"
                         Text="Password Again"
-                        GotFocus="TextBox_GotFocus"
+                        
                         FontSize="30"
                         Width="300"
                         Grid.Row="5"
