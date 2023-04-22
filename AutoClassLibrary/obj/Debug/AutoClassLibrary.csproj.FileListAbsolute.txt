@@ -10,8 +10,5 @@ C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\bin\Debug\EntityFramework.S
 C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.CopyComplete
 C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.dll
 C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.pdb
-C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations.Init.resources
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations.init.resources
 C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.GenerateResource.cache
-C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations._2.resources
-C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations._3.resources
-C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations._4.resources

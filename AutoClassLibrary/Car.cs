@@ -26,7 +26,6 @@ namespace AutoClassLibrary
         private EnumLights lights;
         private bool emergencyLights;
         private bool doorsopen;
-        private List<Raport> raports;
 
         [Key]
         public string Vin { get { return vin; } set { vin = value; } }
@@ -36,9 +35,9 @@ namespace AutoClassLibrary
         public EnumLights Lights { get { return lights; } set { lights = value; } }
         public bool EmergencyLights { get { return emergencyLights; } set { emergencyLights = value; } }
         public bool Doorsopen { get { return doorsopen; } set { doorsopen = value; } }
+        public virtual List<Raport> Raports { get; set; }
         public virtual User User { get; set; }
         public string UserEmail { get; set; }
-        public List<Raport> Raports { get; set; }
 
         public Car()
         {

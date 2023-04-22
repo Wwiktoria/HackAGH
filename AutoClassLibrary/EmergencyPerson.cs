@@ -15,8 +15,10 @@ namespace AutoClassLibrary
 
         public int EmergencyPersonID { get { return emergencyPersonID; } set { emergencyPersonID = value; } }
         public string Name { get { return name; } set { name = value; } }
-        public string Surname { get {  return surname; } set {  surname = value; } }
+        public string Surname { get {  return surname; } set { surname = value; } }
         public string Nrtel { get { return nrtel; } set { nrtel = value; } }
+        public virtual User User { get; set; }
+        public string UserEmail { get; set; }
 
         public EmergencyPerson()
         {
