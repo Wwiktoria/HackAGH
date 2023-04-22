@@ -27,3 +27,5 @@ C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoC
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.CopyComplete
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.dll
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.pdb
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations.init.resources
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.GenerateResource.cache

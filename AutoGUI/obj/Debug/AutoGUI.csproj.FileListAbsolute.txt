@@ -236,3 +236,10 @@ C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\LogIn.g.cs
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\SignIn.g.cs
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\LogIn.baml
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\SignIn.baml
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\bin\Debug\AutoClassLibrary.dll
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\bin\Debug\AutoClassLibrary.pdb
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\bin\Debug\AutoClassLibrary.dll.config
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\bin\Debug\EntityFramework.SqlServer.xml

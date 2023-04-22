@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AutoClassLibrary
 {
-    public class User
+    public class User:Model1
     {
         private string name;
         private string surname;
@@ -87,6 +87,23 @@ namespace AutoClassLibrary
         //    Users.Add(this);
         //    SaveChanges();
         //}
+        public bool CheckIfExist()
+        {
+            return Users.Any(x => x.Email == this.Email);
 
+        }
+
+        public User CheckIfExistLogin(string email, string password)
+        {
+            SavedUser = Users.FirstOrDefault(x => (x.Email == email && x.Password == password));
+            return SavedUser;
+        }
+        public void SaveUserToBase()
+        {
+
+
+            Users.Add(this);
+            SaveChanges();
+        }
     }
 }

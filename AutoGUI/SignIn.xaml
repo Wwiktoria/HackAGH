@@ -34,7 +34,7 @@
                         FontFamily="Fonts/#Dosis"
                         FontWeight="Bold"
                         Text="Mail"
-                        GotFocus="TextBox_GotFocus"
+                        
                         FontSize="30"
                         Width="300" Margin="120,0,120,0"
                         >
@@ -56,7 +56,7 @@
                         FontFamily="Fonts/#Dosis"
                         FontWeight="Bold"
                         Text="Password"
-                        GotFocus="TextBox_GotFocus"
+                        
                         FontSize="30"
                         Width="300"
                         Grid.Row="1" Margin="120,0,120,0"
