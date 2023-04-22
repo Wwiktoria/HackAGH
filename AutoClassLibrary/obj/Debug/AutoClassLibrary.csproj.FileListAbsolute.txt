@@ -29,3 +29,17 @@ C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoC
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.pdb
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations.init.resources
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.GenerateResource.cache
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\bin\Debug\AutoClassLibrary.dll.config
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\bin\Debug\AutoClassLibrary.dll
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\bin\Debug\AutoClassLibrary.pdb
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\bin\Debug\EntityFramework.dll
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\bin\Debug\EntityFramework.xml
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.AssemblyReference.cache
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations.init.resources
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.GenerateResource.cache
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.CopyComplete
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.dll
+C:\Users\lenovo\source\repos\HackAGH\HackAGH\AutoClassLibrary\obj\Debug\AutoClassLibrary.pdb

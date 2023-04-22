@@ -10,7 +10,6 @@ namespace AutoClassLibrary
     {
         static void Main(string[] args)
         {
-
         }
     }
 }

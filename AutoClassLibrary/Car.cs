@@ -50,6 +50,7 @@ namespace AutoClassLibrary
         public Car()
         {
             Reports = new List<Raport>();
+            EmergencyPeopleTel = new List<string>();
         }
         public Car(string vin, string regnum, string name):this()
         {

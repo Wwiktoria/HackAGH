@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Forms;
 using AutoClassLibrary;
 namespace AutoGUI
 {
@@ -24,6 +23,8 @@ namespace AutoGUI
         Car car;
         public MainWindow()
         {
+            Car car = new Car("123", "abc", "name");
+            car.DiabetesAlert();
             InitializeComponent();
         }
 
