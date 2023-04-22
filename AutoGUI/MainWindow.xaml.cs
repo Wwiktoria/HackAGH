@@ -12,9 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Threading;
 using AutoClassLibrary;
-
 namespace AutoGUI
 {
     /// <summary>
@@ -22,64 +20,63 @@ namespace AutoGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public void Notify(string num)
+        {
+            MessageBox.Show($"Sent an emergency message {num} at {DateTime.Now.ToString("HH:mm:ss")}");
+        }
+
         Car car;
         public MainWindow()
         {
-            car = new Car("123", "abc", "name");
-            car.DiabetesAlert();
+            car = new Car("123", "abc", "name", new List<string>() {"123432567","120909123"});
             InitializeComponent();
         }
-        private void dispatcherTimer_Tick(object sender, EventArgs e)
+
+        private void BtnDiabetes_Click(object sender, RoutedEventArgs e)
         {
-            lblLights.Visibility = Visibility.Hidden;
-            
-            
-            
-        }
-
-        private void dispatcherTimer_Tick1(object sender, EventArgs e)
-        {
-            
-
-            lblLights.Visibility = Visibility.Visible;
-
-
-        }
-
-
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
             //wy�wietla na ekranie ostrze�enie �e co� si� dzieje z opaski
             //popup
             //zapytanie
             //tak/nie, na odpowiedź 5min (sek)
-            string message = "The state of the driver is worsening. You have 5 minutes to take action. Are you able to do it?";
+            string message = "The state of the driver is worsening. Are you able to intervene within 5 minutes?";
             string title = "Diabetes Alert";
             if(MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.No)
             {
+                foreach (string num in car.EmergencyPeopleTel)
+                {
+                    Notify(num);
+                }
                 car.DiabetesAlert();
-                DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
-                dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-                dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 505);
-                dispatcherTimer.Start();
-
-                DispatcherTimer dispatcherTimer1 = new System.Windows.Threading.DispatcherTimer();
-                dispatcherTimer1.Tick += new EventHandler(dispatcherTimer_Tick1);
-                dispatcherTimer1.Interval = new TimeSpan(0, 0, 1);
-                dispatcherTimer1.Start();
-
-                imgTriangle.Visibility = Visibility.Visible;
-                imgUnlocked.Visibility = Visibility.Visible;
-                imgLIghts.Visibility = Visibility.Visible;
             }
-
-            
-
 
             //MessageBox.Show("The state of the driver is worsening, you have 5 minutes to intervene");
             //car.DiabetesAlert();
+        }
+
+        private void BtnTheft_Click(object sender, RoutedEventArgs e)
+        {
+            string message = "Are you sure your car was stolen?";
+            string title = "Theft Alert";
+            if (MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                car.Theft();
+                MessageBox.Show("Your car has been stopped. Be sure to contact the authorities");
+            }
+        }
+
+        private void BtnEmergency_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (string num in car.EmergencyPeopleTel)
+            {
+                Notify(num);
+            }
+            car.Emergency();
+            MessageBox.Show("Your family members from emergency list have been informed about the emergency.");
+        }
+
+        private void BtnProfile_Click(object sender, RoutedEventArgs e)
+        {
+            car.UpdateReport();
         }
     }
 }

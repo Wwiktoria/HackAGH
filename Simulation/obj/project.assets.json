@@ -1,11 +1,46 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "AutoClassLibrary/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/AutoClassLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AutoClassLibrary.dll": {}
+        }
+      },
+      "AutoGUI/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "AutoClassLibrary": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AutoGUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AutoGUI.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AutoClassLibrary/1.0.0": {
+      "type": "project",
+      "path": "../AutoClassLibrary/AutoClassLibrary.csproj",
+      "msbuildProject": "../AutoClassLibrary/AutoClassLibrary.csproj"
+    },
+    "AutoGUI/1.0.0": {
+      "type": "project",
+      "path": "../AutoGUI/AutoGUI.csproj",
+      "msbuildProject": "../AutoGUI/AutoGUI.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "AutoGUI >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Administrator\\.nuget\\packages\\": {}
@@ -33,7 +68,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoGUI\\AutoGUI.csproj": {
+              "projectPath": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoGUI\\AutoGUI.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

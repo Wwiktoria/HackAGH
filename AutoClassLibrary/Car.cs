@@ -52,11 +52,12 @@ namespace AutoClassLibrary
             Reports = new List<Raport>();
             EmergencyPeopleTel = new List<string>();
         }
-        public Car(string vin, string regnum, string name):this()
+        public Car(string vin, string regnum, string name, List<string> emergencyNumbers):this()
         {
             this.vin = vin;
             this.regnum = regnum;
             this.name = name;
+            this.emergencyPeopleTel = emergencyNumbers;
             speed = 0;
             lights = EnumLights.DRLs;
             emergencyLights = false;
@@ -67,6 +68,8 @@ namespace AutoClassLibrary
         public void CapSpeed(double cap)
         {
             Speed = cap;
+            string log = $"Speed cap has been set to {cap}";
+            Reports.Add(new Raport(log));
             // temp
         }
 
@@ -122,15 +125,15 @@ namespace AutoClassLibrary
             Reports.Add(new Raport(log));
             //doda� raport do sqla
         }
-        public void Notify(string num)
-        {
-            Console.WriteLine($"Send an emergency message {num} at {DateTime.Now.ToString("HH:mm:ss")}");
-        }
+        //public void Notify(string num)
+        //{
+        //    Console.WriteLine($"Sent an emergency message {num} at {DateTime.Now.ToString("HH:mm:ss")}");
+        //}
         public void ShowLocalization()
         {
 
         }
-        public void Theft(Car c)
+        public void Theft()
         {
             //lokalizacja
             //zatrzymanie samochodu
@@ -138,21 +141,28 @@ namespace AutoClassLibrary
             //�wiat�a awaryjne ON
             //alarm
             ShowLocalization();
-            c.Speed = 0;
-            c.Doorsopen = true;
-            c.EmergencyLights = true;
-            c.Alarm = true;
+            Speed = 0;
+            Doorsopen = true;
+            EmergencyLights = true;
+            Alarm = true;
+            string log = $"Theft alert";
+            //at {DateTime.Now.ToString("yyyy-MM-dd, HH-mm-ss")}
+            Reports.Add(new Raport(log));
         }
         public void Emergency()
         {
             //wysy�a powiadomienie do os�b z listy emergencyPeople
             //lokalizacja
             //data godzina
-            foreach (string num in EmergencyPeopleTel)
-            {
-                Notify(num);
-            }
+            //foreach (string num in EmergencyPeopleTel)
+            //{
+            //    Notify(num);
+            //}
+            //ta część kodu w window
             ShowLocalization();
+            string log = $"Emergency alert";
+            //at {DateTime.Now.ToString("yyyy-MM-dd, HH-mm-ss")}
+            Reports.Add(new Raport(log));
         }
         public void DiabetesAlert()
         {
@@ -164,14 +174,17 @@ namespace AutoClassLibrary
             //otwieramy drzwi
 
             ShowLocalization();
-            foreach(string num in EmergencyPeopleTel)
-            {
-                Notify(num);
-            }
+            //foreach(string num in EmergencyPeopleTel)
+            //{
+            //    Notify(num);
+            //}
+            //ta część kodu w window
             speed = 0;
             doorsopen = true;
             emergencyLights = true;
-
+            string log = $"Diabetes alert";
+            //at {DateTime.Now.ToString("yyyy-MM-dd, HH-mm-ss")}
+            Reports.Add(new Raport(log));
         }
 
         public void UpdateReport()
@@ -186,7 +199,7 @@ namespace AutoClassLibrary
                 string rep = $"{raport.Log} at {raport.Data.ToString("dd MMMM yyyy HH:mm:ss")}";
                 sb.AppendLine(rep);
             }
-            File.WriteAllText(path, textFin.ToString());
+            File.WriteAllText(path, sb.ToString());
             //Raports.Clear(); //skoro nie dodajemy do sqla to nie trzeba czy�ci�
         }
 
