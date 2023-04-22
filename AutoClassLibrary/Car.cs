@@ -70,6 +70,11 @@ namespace AutoClassLibrary
         {
             doorsopen = !doorsopen;
         }
+
+        public void blabla()
+        {
+
+        }
     }
 }
 
