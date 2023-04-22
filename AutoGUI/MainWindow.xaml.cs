@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AutoClassLibrary
 namespace AutoGUI
 {
     /// <summary>
@@ -23,7 +22,6 @@ namespace AutoGUI
         public MainWindow()
         {
             InitializeComponent();
-            
         }
     }
 }

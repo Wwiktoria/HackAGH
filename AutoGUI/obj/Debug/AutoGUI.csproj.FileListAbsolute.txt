@@ -349,3 +349,5 @@ C:\Users\Defo\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\AutoGUI.csproj.CoreComp
 C:\Users\Defo\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\AutoGUI.csproj.CopyComplete
 C:\Users\Defo\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\AutoGUI.exe
 C:\Users\Defo\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\AutoGUI.pdb
+C:\Users\Defo\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\LogIn.g.cs
+C:\Users\Defo\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\SignIn.g.cs

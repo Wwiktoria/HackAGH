@@ -10,15 +10,8 @@ namespace AutoClassLibrary
     {
         static void Main(string[] args)
         {
-            Car SimulatedCar = new Car("1G8AJ55F46Z188533", "WML8887", "Ferrari");
-            Random rand = new Random();
 
-            while (true)
-            {
-               
-            }
         }
-
     }
 }
 
