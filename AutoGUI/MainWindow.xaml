@@ -18,6 +18,7 @@
                 <GradientStop Color="#FF1E0A0A" Offset="0.196"/>
             </LinearGradientBrush>
         </Border.Background>
+
         <Grid Margin="0,10,433,0">
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -25,40 +26,77 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <Button Margin="10,10,10,148" Background="Transparent">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="360"/>
+
+                    </Style>
+
+                </Button.Resources>
+                <StackPanel>
+                    <Image Source="Images/Home.png" Width="103" Height="76" />
+                </StackPanel>
+            </Button>
+
+
             <Border Width="40" Height="40" Padding="3" CornerRadius="100"
                             DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0">
-                
-                <Image Source="Images/Home.png" Margin="-25,-71,-27,50"/>
+
+                <Image Source="Images/Car info.png" Margin="120,164,-465,-378"/>
 
             </Border>
+
             <Border Background="#FF0A1046" CornerRadius="0,50,0,30" Margin="0,93,0,0" Grid.RowSpan="4" BorderThickness="0,1,1,0" BorderBrush="#FFFBF7F7">
                 <DockPanel>
-                <Border Width="40" Height="40" Padding="3" CornerRadius="100"
+                    <Border Width="40" Height="40" Padding="3" CornerRadius="100"
                             DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0">
-                    
-                    <Image Source="Images/Car break-in1.png" Margin="-4,370,-32,-400"/>
 
-                </Border>
-                <Border Width="40" Height="40" Padding="3" CornerRadius="100"
-                            DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0" >
+                        <Image Source="Images/Car break-in1.png" Margin="-4,504,-32,-534"/>
 
-                    <Image Source="Images/Diabetes.png" Margin="-12,155,-40,-185" Grid.Row="2"/>
+                    </Border>
+                    <Button Margin="10,10,10,148" Background="Transparent" Height="82" Grid.Row="2">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="360"/>
 
-                </Border>
+                            </Style>
+
+                        </Button.Resources>
+                        <StackPanel>
+                            <Image Source="Images/Diabetes.png" Width="103" Height="76" />
+                        </StackPanel>
+                    </Button>
+
                     <Border Width="40" Height="40" Padding="3" CornerRadius="100"
                             DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0" >
 
-                        <Image Source="Images/Profile1.png" Margin="-16,-364,-36,334" Grid.Row="2"/>
+                        <Image Source="Images/Profile1.png" Margin="-16,39,-36,-69" Grid.Row="2"/>
 
                     </Border>
+
+                    <Border Width="40" Height="40" Padding="3" CornerRadius="100"
+                            DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0" >
+
+                        <Image Source="Images/9.png" Margin="-21,493,-41,-527" Grid.Row="2"/>
+
+                    </Border>
+                    <Border Width="40" Height="40" Padding="3" CornerRadius="100"
+                            DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20,-30,0,0" >
+
+                        <Image Source="Images/10.png" Margin="-24,-262,-38,228" Grid.Row="2"/>
+
+                    </Border>
+
                 </DockPanel>
             </Border>
 
-             
 
-           
+
+
 
         </Grid>
+
     </Border>
 
 
