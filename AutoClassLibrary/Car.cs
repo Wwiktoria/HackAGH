@@ -34,7 +34,7 @@ namespace AutoClassLibrary
         public bool EmergencyLights { get { return emergencyLights; } set { emergencyLights = value; } }
         public bool Doorsopen { get { return doorsopen; } set { doorsopen = value; } }
         public virtual User User { get; set; }
-        public int Email { get; set; }
+        public string UserEmail { get; set; }
 
         public Car(string vin, string regnum, string name)
         {

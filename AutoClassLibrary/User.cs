@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace AutoClassLibrary
 {
@@ -8,7 +9,7 @@ namespace AutoClassLibrary
         private string name;
         private string surname;
         private string telnr;
-        private string email;
+        private string userEmail;
         private string password;
         public static User SavedUser;
 
@@ -27,42 +28,42 @@ namespace AutoClassLibrary
             }
         }
         [Key]
-        public string Email {
-            get { return email; }
+        public string UserEmail {
+            get { return userEmail; }
             set {
                 //if(Regex.IsMatch(value, @"^([a-z]|\d)*@[a-z]*\.(com|pl)$"))
                 //{
                 //    email = value;
                 //}
                 //else { }
-                email = value;
-            } 
+                userEmail = value;
+            }
         }
         public string Password { get { return password; } set { password = value; } }
+
+        public virtual List<Car> Cars { get; set; }
 
         public User(string name, string surname, string telnr, string email, string password)
         {
             Name = name;
             Surname = surname;
             Telnr = telnr;
-            Email = email;
+            UserEmail = email;
             Password = password;
         }
 
-        public bool LogIn(string email, string givenPassword)
-        {
-            //znalezienie has³a w bazie dla podanego emaila
-            //password
-            string password;
-            bool access = (givenPassword == password) ? true : false;
-            return access;
-        }
+        //public bool LogIn(string email, string givenPassword)
+        //{
+        //    //znalezienie has³a w bazie dla podanego emaila
+        //    //password
+        //    string password;
+        //    bool access = (givenPassword == password) ? true : false;
+        //    return access;
+        //}
         public void LogOut()
         {
 
         }
-
-
 
     }
 }
