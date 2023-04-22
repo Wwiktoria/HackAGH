@@ -89,7 +89,7 @@
 
                         </Button.Resources>
                         <StackPanel>
-                            <Image Source="Images/mapa.png" Width="103" Height="76" />
+                            <Image Source="Images/mapa.png" Width="103" Height="76" RenderTransformOrigin="0.544,0.5" />
                         </StackPanel>
                     </Button>
 

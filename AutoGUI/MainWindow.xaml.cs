@@ -33,7 +33,7 @@ namespace AutoGUI
         Car car;
         public MainWindow()
         {
-            car = new Car("123", "abc", "name", 30, 40, new List<string>() {"123432567","120909123"});
+            car = new Car("123", "abc", "name", 50.06806933169489, 19.912943356090143, new List<string>() {"123432567","120909123"});
             InitializeComponent();
             SetBackgroundImage(imagePaths[0]);
         }
@@ -54,9 +54,6 @@ namespace AutoGUI
                 }
                 car.DiabetesAlert();
                 lblLights.Visibility= Visibility.Visible;
-                imgUnlocked.Visibility = Visibility.Visible;
-              
-                
             }
             
             //MessageBox.Show("The state of the driver is worsening, you have 5 minutes to intervene");
@@ -74,8 +71,6 @@ namespace AutoGUI
                 (new Map(car)).ShowDialog();
             }
             lblLights.Visibility = Visibility.Visible;
-            imgUnlocked.Visibility = Visibility.Visible;
-            
         }
 
         private void BtnEmergency_Click(object sender, RoutedEventArgs e)
@@ -88,23 +83,20 @@ namespace AutoGUI
             MessageBox.Show("Your family members from emergency list have been informed about the emergency.");
 
             lblLights.Visibility = Visibility.Visible;
-            imgUnlocked.Visibility = Visibility.Visible;
             
         }
 
         private void BtnProfile_Click(object sender, RoutedEventArgs e)
         {
-            car.UpdateReport();
+            (new Map(car)).ShowDialog();
         }
 
-        
-
         private int currentImageIndex = 0;
-        private string[] imagePaths = {  ("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\lightsOff.png"),
-    ("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\loghtsON.png"),
-    ("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\Emergency.png") };
-        private string[] imagePaths1 = { "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\unlocked1.png",
-"C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\Locked.png"
+        private string[] imagePaths = {  ("..\\..\\Images\\lightsOff.png"),
+    ("..\\..\\Images\\loghtsON.png"),
+    ("..\\..\\Images\\Emergency.png") };
+        private string[] imagePaths1 = { "..\\..\\Images\\unlocked1.png",
+"..\\..\\Images\\Locked.png"
         };
 
         private void SetBackgroundImage(string imagePath)
