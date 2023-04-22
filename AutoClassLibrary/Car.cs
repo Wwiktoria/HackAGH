@@ -5,6 +5,8 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace AutoClassLibrary
 {
@@ -65,39 +67,60 @@ namespace AutoClassLibrary
         public void ToggleLights(EnumLights type)
         {
             lights = type;
-            string log = $"Changed lights to {type}";
-            Raports.Add(new Raport(log));
+            //string log = $"Changed lights to {type}";
+            //Raports.Add(new Raport(log));
 
         }
 
         public void ToggleEmergencyLights()
         {
             emergencyLights = !emergencyLights;
-            string log;
-            if (emergencyLights)
-            {
-                log = $"Turned emergency lights ON";
-            }
-            else
-            {
-                log = $"Turned emergency lights OFF";
-            }
-            Raports.Add(new Raport(log));
+            //string log;
+            //if (emergencyLights)
+            //{
+            //    log = $"Turned emergency lights ON";
+            //}
+            //else
+            //{
+            //    log = $"Turned emergency lights OFF";
+            //}
+            //Raports.Add(new Raport(log));
         }
 
         public void ToggleDoors()
         {
             doorsopen = !doorsopen;
-            string log;
-            if (doorsopen)
-            {
-                log = $"Doors opened";
-            }
-            else
-            {
-                log = $"Doors closed";
-            }
-            Raports.Add(new Raport(log));
+            //string log;
+            //if (doorsopen)
+            //{
+            //    log = $"Doors opened";
+            //}
+            //else
+            //{
+            //    log = $"Doors closed";
+            //}
+            //Raports.Add(new Raport(log));
+            //dodaæ raport do sqla
+        }
+
+        //public void UpdateRaport()
+        //{
+        //    //dodanie obecnej listy do sqla
+        //    Raports.Clear();
+        //}
+
+        public static void SaveXML(string name, Car c)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Car));
+            TextWriter writer = new StreamWriter($"{name}.xml");
+            serializer.Serialize(writer, c);
+            writer.Close();
+        }
+        public static Car ReadXML(string name)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Car));
+            FileStream fs = new FileStream($"{name}.xml", FileMode.Open);
+            return (Car)serializer.Deserialize(fs);
         }
 
     }
