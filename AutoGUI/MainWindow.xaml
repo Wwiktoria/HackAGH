@@ -55,7 +55,7 @@
                         <Image Source="Images/Car break-in1.png" Margin="-4,504,-32,-534"/>
 
                     </Border>
-                    <Button Margin="10,10,10,148" Background="Transparent" Height="82" Grid.Row="2">
+                    <Button Margin="10,10,10,148" Background="Transparent" Height="82" Grid.Row="2" Click="Button_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="360"/>
