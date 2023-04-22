@@ -23,5 +23,15 @@ namespace AutoGUI
         {
             InitializeComponent();
         }
+
+        private void txtPasswordNext_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
