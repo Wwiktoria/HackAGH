@@ -157,6 +157,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SignIn.xaml.cs">
+      <DependentUpon>SignIn.xaml</DependentUpon>
+    </Compile>
+    <Page Include="LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,6 +176,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="LogIn.xaml.cs">
+      <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
@@ -176,6 +186,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SignIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -209,6 +223,28 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="339865390_198949972910191_7553362764699858970_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\App icon.png" />
+    <Resource Include="Images\Car break-in.png" />
+    <Resource Include="Images\Car info.png" />
+    <Resource Include="Images\Diabetes.png" />
+    <Resource Include="Images\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile1.png" />
+    <Resource Include="Images\Side car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\10.png" />
+    <Resource Include="Images\11.png" />
+    <Resource Include="Images\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Car break-in1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
