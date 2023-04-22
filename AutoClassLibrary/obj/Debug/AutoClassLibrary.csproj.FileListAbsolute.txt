@@ -12,9 +12,6 @@ C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.
 C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.pdb
 C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations.Init.resources
 C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.GenerateResource.cache
-C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations._2.resources
-C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations._3.resources
-C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations._4.resources
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\bin\Debug\AutoClassLibrary.dll.config
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\bin\Debug\AutoClassLibrary.dll
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoClassLibrary\bin\Debug\AutoClassLibrary.pdb

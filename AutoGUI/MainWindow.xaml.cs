@@ -33,7 +33,7 @@ namespace AutoGUI
         Car car;
         public MainWindow()
         {
-            car = new Car("123", "abc", "name", new List<string>() {"123432567","120909123"});
+            car = new Car("123", "abc", "name", 30, 40, new List<string>() {"123432567","120909123"});
             InitializeComponent();
             SetBackgroundImage(imagePaths[0]);
         }
@@ -80,7 +80,7 @@ namespace AutoGUI
             {
                 car.Theft();
                 MessageBox.Show("Your car has been stopped. Be sure to contact the authorities");
-
+                (new Map(car)).ShowDialog();
             }
             lblLights.Visibility = Visibility.Visible;
 

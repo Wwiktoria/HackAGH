@@ -29,6 +29,8 @@ namespace AutoClassLibrary
         private bool emergencyLights;
         private bool alarm;
         private bool doorsopen;
+        private double latitude;
+        private double longitude;
         private List<string> emergencyPeopleTel;
         private List<Raport> reports;
 
@@ -41,6 +43,8 @@ namespace AutoClassLibrary
         public bool EmergencyLights { get { return emergencyLights; } set { emergencyLights = value; } }
         public bool Alarm { get { return alarm; } set { alarm = value; } }
         public bool Doorsopen { get { return doorsopen; } set { doorsopen = value; } }
+        public double Latitude { get => latitude; set => latitude = value; }
+        public double Longitude { get => longitude; set => longitude = value; }
         public virtual List<Raport> Raports { get; set; }
         public virtual User User { get; set; }
         public string UserEmail { get; set; }
@@ -52,12 +56,14 @@ namespace AutoClassLibrary
             Reports = new List<Raport>();
             EmergencyPeopleTel = new List<string>();
         }
-        public Car(string vin, string regnum, string name, List<string> emergencyNumbers):this()
+        public Car(string vin, string regnum, string name, double latitude, double longitude, List<string> emergencyNumbers):this()
         {
             this.vin = vin;
             this.regnum = regnum;
             this.name = name;
-            this.emergencyPeopleTel = emergencyNumbers;
+            this.latitude = latitude;
+            this.longitude = longitude;
+            emergencyPeopleTel = emergencyNumbers;
             speed = 0;
             lights = EnumLights.DRLs;
             emergencyLights = false;

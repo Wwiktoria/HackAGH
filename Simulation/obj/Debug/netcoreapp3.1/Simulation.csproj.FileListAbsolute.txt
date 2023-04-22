@@ -1,5 +1,0 @@
-C:\Users\Defo\Documents\GitHub\HackAGH\Simulation\obj\Debug\netcoreapp3.1\Simulation.csproj.AssemblyReference.cache
-C:\Users\Defo\Documents\GitHub\HackAGH\Simulation\obj\Debug\netcoreapp3.1\Simulation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Defo\Documents\GitHub\HackAGH\Simulation\obj\Debug\netcoreapp3.1\Simulation.AssemblyInfoInputs.cache
-C:\Users\Defo\Documents\GitHub\HackAGH\Simulation\obj\Debug\netcoreapp3.1\Simulation.AssemblyInfo.cs
-C:\Users\Defo\Documents\GitHub\HackAGH\Simulation\obj\Debug\netcoreapp3.1\Simulation.csproj.CoreCompileInputs.cache
