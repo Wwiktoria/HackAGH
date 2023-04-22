@@ -389,3 +389,7 @@ C:\Users\couch\source\repos\AutoApp\AutoGUI\bin\Debug\Microsoft.Maps.MapControl.
 C:\Users\couch\source\repos\AutoApp\AutoGUI\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
 C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\Map.g.cs
 C:\Users\couch\source\repos\AutoApp\AutoGUI\obj\Debug\Map.baml
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\Map.g.cs
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\Map.baml

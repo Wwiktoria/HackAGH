@@ -33,7 +33,7 @@ namespace AutoGUI
         Car car;
         public MainWindow()
         {
-            car = new Car("123", "abc", "name", 30, 40, new List<string>() {"123432567","120909123"});
+            car = new Car("123", "abc", "name", 50.068118856575516, 19.912615579968698, new List<string>() {"123432567","120909123"});
             InitializeComponent();
             SetBackgroundImage(imagePaths[0]);
         }
@@ -179,6 +179,11 @@ namespace AutoGUI
                 currentImageIndex = 0;
             }
             SetBackgroundImage2(imagePaths2[currentImageIndex]);
+        }
+
+        private void BtnReport_Click(object sender, RoutedEventArgs e)
+        {
+            car.UpdateReport();
         }
     }
     }
