@@ -98,6 +98,8 @@ namespace AutoGUI
         private string[] imagePaths1 = { "..\\..\\Images\\unlocked1.png",
 "..\\..\\Images\\Locked.png"
         };
+        private string[] imagePaths2 = { "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\puste.png","C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\alarm.png"
+        };
 
         private void SetBackgroundImage(string imagePath)
         {
@@ -113,6 +115,14 @@ namespace AutoGUI
             brush.ImageSource = new BitmapImage(new Uri(imagePath1, UriKind.Relative));
             brush.Stretch = Stretch.Uniform;
             btnLocked.Background = brush;
+        }
+
+        private void SetBackgroundImage2(string imagePath2)
+        {
+            ImageBrush brush = new ImageBrush();
+            brush.ImageSource = new BitmapImage(new Uri(imagePath2, UriKind.Relative));
+            brush.Stretch = Stretch.Uniform;
+            btnEmergency1.Background = brush;
         }
         private void btnLights_Click(object sender, RoutedEventArgs e)
         {
@@ -133,6 +143,16 @@ namespace AutoGUI
                 currentImageIndex = 0;
             }
             SetBackgroundImage1(imagePaths1[currentImageIndex]);
+        }
+
+        private void btnEmergency1_Click(object sender, RoutedEventArgs e)
+        {
+            currentImageIndex++;
+            if (currentImageIndex >= imagePaths2.Length)
+            {
+                currentImageIndex = 0;
+            }
+            SetBackgroundImage2(imagePaths2[currentImageIndex]);
         }
     }
     }
