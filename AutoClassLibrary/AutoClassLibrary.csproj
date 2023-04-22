@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
+    <Compile Include="EmergencyPerson.cs" />
     <Compile Include="Migrations\202304221155160_Init.cs" />
     <Compile Include="Migrations\202304221155160_Init.designer.cs">
       <DependentUpon>202304221155160_Init.cs</DependentUpon>
