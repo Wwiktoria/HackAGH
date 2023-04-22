@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "vgfa+JCC4jTuI5u9j/LXalZJPW3K1/X0UKsmlPSg/aYQG+vgQH3xbbyEZohdH6U2SGUMXuFmuSxNHXOytZLvfg==",
+  "dgSpecHash": "CDIRwxH0PlgkA5EGgE2GFXcJ55IZvBI4U0zlU5Ts46ZLu9vDYGlt9Gf2Z3N2RMl46QCerQCLTHx5jbP78Z7Xbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Defo\\Documents\\GitHub\\HackAGH\\Simulation\\Simulation.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\couch\\source\\repos\\AutoApp\\Simulation\\Simulation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\couch\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\couch\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\couch\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\couch\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
   "logs": []
 }
