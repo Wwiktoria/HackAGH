@@ -287,6 +287,12 @@
   <ItemGroup>
     <Resource Include="Images\loghtsON.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\alarm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\puste.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

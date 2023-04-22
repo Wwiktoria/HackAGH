@@ -54,9 +54,18 @@ namespace AutoGUI
                 }
                 car.DiabetesAlert();
                 lblLights.Visibility= Visibility.Visible;
-                imgUnlocked.Visibility = Visibility.Visible;
-              
-                
+                ImageBrush brush = new ImageBrush();
+                brush.ImageSource = new BitmapImage(new Uri("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\unlocked1.png", UriKind.Relative));
+                brush.Stretch = Stretch.Uniform;
+                btnLocked.Background = brush;
+
+                ImageBrush brush1 = new ImageBrush();
+                brush1.ImageSource = new BitmapImage(new Uri("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\Emergency.png", UriKind.Relative));
+                brush1.Stretch = Stretch.Uniform;
+                btnLights.Background = brush1;
+
+
+
             }
             
             //MessageBox.Show("The state of the driver is worsening, you have 5 minutes to intervene");
@@ -74,8 +83,17 @@ namespace AutoGUI
 
             }
             lblLights.Visibility = Visibility.Visible;
-            imgUnlocked.Visibility = Visibility.Visible;
-            
+
+            ImageBrush brush = new ImageBrush();
+            brush.ImageSource = new BitmapImage(new Uri("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\unlocked1.png", UriKind.Relative));
+            brush.Stretch = Stretch.Uniform;
+            btnLocked.Background = brush;
+
+            ImageBrush brush1 = new ImageBrush();
+            brush1.ImageSource = new BitmapImage(new Uri("C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\alarm.png", UriKind.Relative));
+            brush1.Stretch = Stretch.Uniform;
+            btnEmergency1.Background = brush1;
+
         }
 
         private void BtnEmergency_Click(object sender, RoutedEventArgs e)
@@ -88,7 +106,7 @@ namespace AutoGUI
             MessageBox.Show("Your family members from emergency list have been informed about the emergency.");
 
             lblLights.Visibility = Visibility.Visible;
-            imgUnlocked.Visibility = Visibility.Visible;
+            
             
         }
 
@@ -106,6 +124,8 @@ namespace AutoGUI
         private string[] imagePaths1 = { "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\unlocked1.png",
 "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\Locked.png"
         };
+        private string[] imagePaths2 = { "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\puste.png","C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\Images\\alarm.png"
+        };
 
         private void SetBackgroundImage(string imagePath)
         {
@@ -121,6 +141,14 @@ namespace AutoGUI
             brush.ImageSource = new BitmapImage(new Uri(imagePath1, UriKind.Relative));
             brush.Stretch = Stretch.Uniform;
             btnLocked.Background = brush;
+        }
+
+        private void SetBackgroundImage2(string imagePath2)
+        {
+            ImageBrush brush = new ImageBrush();
+            brush.ImageSource = new BitmapImage(new Uri(imagePath2, UriKind.Relative));
+            brush.Stretch = Stretch.Uniform;
+            btnEmergency1.Background = brush;
         }
         private void btnLights_Click(object sender, RoutedEventArgs e)
         {
@@ -141,6 +169,16 @@ namespace AutoGUI
                 currentImageIndex = 0;
             }
             SetBackgroundImage1(imagePaths1[currentImageIndex]);
+        }
+
+        private void btnEmergency1_Click(object sender, RoutedEventArgs e)
+        {
+            currentImageIndex++;
+            if (currentImageIndex >= imagePaths2.Length)
+            {
+                currentImageIndex = 0;
+            }
+            SetBackgroundImage2(imagePaths2[currentImageIndex]);
         }
     }
     }
