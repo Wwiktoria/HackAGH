@@ -1,9 +1,15 @@
 using System.Text.RegularExpressions;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace AutoClassLibrary
 {
-    public class User
+    public class User:Model1
     {
         private string name;
         private string surname;
@@ -39,6 +45,7 @@ namespace AutoClassLibrary
             } 
         }
         public string Password { get { return password; } set { password = value; } }
+        public virtual List<Car> Cars { get; set; }
 
         public User(string name, string surname, string telnr, string email, string password)
         {
@@ -49,20 +56,35 @@ namespace AutoClassLibrary
             Password = password;
         }
 
-        public bool LogIn(string email, string givenPassword)
-        {
-            //znalezienie has³a w bazie dla podanego emaila
-            //password
-            string password;
-            bool access = (givenPassword == password) ? true : false;
-            return access;
-        }
+        //public bool LogIn(string email, string givenPassword)
+        //{
+        //    //znalezienie has³a w bazie dla podanego emaila
+        //    //password
+        //    string password;
+        //    bool access = (givenPassword == password) ? true : false;
+        //    return access;
+        //}
         public void LogOut()
         {
 
         }
+        public bool CheckIfExist()
+        {
+            return Users.Any(x => x.Email == this.Email);
 
+        }
 
+        public User CheckIfExistLogin(string email, string password)
+        {
+            SavedUser = Users.FirstOrDefault(x => (x.Email == email && x.Password == password));
+            return SavedUser;
+        }
+
+        public void SaveUserToBase()
+        {
+            Users.Add(this);
+            SaveChanges();
+        }
 
     }
 }
