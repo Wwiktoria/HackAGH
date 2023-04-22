@@ -6,11 +6,10 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AutoClassLibrary.AutoClassLibrary;
 
 namespace AutoClassLibrary
 {
-    public class User:Model1
+    public class User
     {
         private string name;
         private string surname;
@@ -47,6 +46,7 @@ namespace AutoClassLibrary
         }
         public string Password { get { return password; } set { password = value; } }
         public virtual List<Car> Cars { get; set; }
+        public virtual List<EmergencyPerson> EmergencyPeople { get; set; }
 
         public User(string name, string surname, string telnr, string email, string password)
         {
@@ -65,27 +65,28 @@ namespace AutoClassLibrary
         //    bool access = (givenPassword == password) ? true : false;
         //    return access;
         //}
-        public void LogOut()
-        {
 
-        }
-        public bool CheckIfExist()
-        {
-            return Users.Any(x => x.Email == this.Email);
+        //public void LogOut()
+        //{
 
-        }
+        //}
+        //public bool CheckIfExist()
+        //{
+        //    return Model1.Users.Any(x => x.Email == this.Email);
 
-        public User CheckIfExistLogin(string email, string password)
-        {
-            SavedUser = Users.FirstOrDefault(x => (x.Email == email && x.Password == password));
-            return SavedUser;
-        }
+        //}
 
-        public void SaveUserToBase()
-        {
-            Users.Add(this);
-            SaveChanges();
-        }
+        //public User CheckIfExistLogin(string email, string password)
+        //{
+        //    SavedUser = Users.FirstOrDefault(x => (x.Email == email && x.Password == password));
+        //    return SavedUser;
+        //}
+
+        //public void SaveUserToBase()
+        //{
+        //    Users.Add(this);
+        //    SaveChanges();
+        //}
 
     }
 }

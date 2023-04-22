@@ -29,8 +29,6 @@ namespace AutoClassLibrary
         private bool emergencyLights;
         private bool alarm;
         private bool doorsopen;
-        private List<string> emergencyPeopleTel;
-        private List<Raport> raports;
 
         [Key]
         public string Vin { get { return vin; } set { vin = value; } }
@@ -41,6 +39,7 @@ namespace AutoClassLibrary
         public bool EmergencyLights { get { return emergencyLights; } set { emergencyLights = value; } }
         public bool Alarm { get { return alarm; } set { alarm = value; } }
         public bool Doorsopen { get { return doorsopen; } set { doorsopen = value; } }
+        public virtual List<Raport> Raports { get; set; }
         public virtual User User { get; set; }
         public string UserEmail { get; set; }
         public List<string> EmergencyPeopleTel { get { return emergencyPeopleTel; } set { emergencyPeopleTel = value; } }
@@ -106,7 +105,7 @@ namespace AutoClassLibrary
                 log = $"Doors closed";
             }
             Raports.Add(new Raport(log));
-            //dodaæ raport do sqla
+            //dodaï¿½ raport do sqla
         }
         public void ToggleAlarm()
         {
@@ -121,11 +120,11 @@ namespace AutoClassLibrary
                 log = $"Doors closed";
             }
             Raports.Add(new Raport(log));
-            //dodaæ raport do sqla
+            //dodaï¿½ raport do sqla
         }
         public void Notify(string num)
         {
-            Console.WriteLine($"Wys³ano powiadomienie na numer alarmowy {num} o godzinie {DateTime.Now}");
+            Console.WriteLine($"Wysï¿½ano powiadomienie na numer alarmowy {num} o godzinie {DateTime.Now}");
         }
         public void ShowLocalization()
         {
@@ -136,7 +135,7 @@ namespace AutoClassLibrary
             //lokalizacja
             //zatrzymanie samochodu
             //otwieramy drzwi
-            //œwiat³a awaryjne ON
+            //ï¿½wiatï¿½a awaryjne ON
             //alarm
             ShowLocalization();
             c.Speed = 0;
@@ -146,7 +145,7 @@ namespace AutoClassLibrary
         }
         public void Emergency()
         {
-            //wysy³a powiadomienie do osób z listy emergencyPeople
+            //wysyï¿½a powiadomienie do osï¿½b z listy emergencyPeople
             //lokalizacja
             //data godzina
             foreach (string num in EmergencyPeopleTel)
@@ -157,12 +156,12 @@ namespace AutoClassLibrary
         }
         public void Diabetes(Car c)
         {
-            //wyœwietla na ekranie ostrze¿enie ¿e coœ siê dzieje z opaski
-            //jeœli stan jest bardzo z³y to: 5min na zaznaczenie ¿e jest okej, inaczej:
+            //wyï¿½wietla na ekranie ostrzeï¿½enie ï¿½e coï¿½ siï¿½ dzieje z opaski
+            //jeï¿½li stan jest bardzo zï¿½y to: 5min na zaznaczenie ï¿½e jest okej, inaczej:
             //lokalizacja
-            //wysy³a powiadomienie do osób z listy emergencyPersons
+            //wysyï¿½a powiadomienie do osï¿½b z listy emergencyPersons
             //zatrzymanie samochodu
-            //œwiat³a awaryjne ON
+            //ï¿½wiatï¿½a awaryjne ON
             //otwieramy drzwi
 
             ShowLocalization();
@@ -188,7 +187,7 @@ namespace AutoClassLibrary
                 sb.AppendLine(rep);
             }
             File.WriteAllText(path, textFin.ToString());
-            //Raports.Clear(); //skoro nie dodajemy do sqla to nie trzeba czyœciæ
+            //Raports.Clear(); //skoro nie dodajemy do sqla to nie trzeba czyï¿½ciï¿½
         }
 
         public static void SaveXML(string name, Car c)

@@ -13,12 +13,13 @@ namespace AutoClassLibrary
         private int logID;
         private DateTime data;
         private string log;
-        private string vin;
 
         [Key]
         public int LogID { get { return logID; } set { logID = value; } }
         public DateTime Data { get { return data; } set { data = value; } }
         public string Log { get { return log; } set { log = value; } }
+        public virtual Car Car { get; set; }
+        public string Vin { get; set; }
 
         public Raport()
         {

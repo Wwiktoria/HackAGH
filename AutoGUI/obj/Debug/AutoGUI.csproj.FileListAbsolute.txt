@@ -232,3 +232,5 @@ C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\AutoGUI.exe
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\AutoGUI.pdb
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\Main.g.cs
 C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\Main.baml
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\LogIn.g.cs
+C:\Users\Administrator\Documents\GitHub\HackAGH\AutoGUI\obj\Debug\SignIn.g.cs
