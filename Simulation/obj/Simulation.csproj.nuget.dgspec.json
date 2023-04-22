@@ -4,6 +4,40 @@
     "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\Simulation\\Simulation.csproj": {}
   },
   "projects": {
+    "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoClassLibrary\\AutoClassLibrary.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoClassLibrary\\AutoClassLibrary.csproj",
+        "projectName": "AutoClassLibrary",
+        "projectPath": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoClassLibrary\\AutoClassLibrary.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoGUI\\AutoGUI.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoGUI\\AutoGUI.csproj",
+        "projectName": "AutoGUI",
+        "projectPath": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoGUI\\AutoGUI.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoClassLibrary\\AutoClassLibrary.csproj": {
+                "projectPath": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoClassLibrary\\AutoClassLibrary.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\Simulation\\Simulation.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +61,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoGUI\\AutoGUI.csproj": {
+                "projectPath": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoGUI\\AutoGUI.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

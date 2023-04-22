@@ -20,11 +20,15 @@ namespace AutoGUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public void Notify(string num)
+        {
+            MessageBox.Show($"Sent an emergency message {num} at {DateTime.Now.ToString("HH:mm:ss")}");
+        }
+
         Car car;
         public MainWindow()
         {
-            Car car = new Car("123", "abc", "name");
-            car.DiabetesAlert();
+            car = new Car("123", "abc", "name", new List<string>() {"123432567","120909123"});
             InitializeComponent();
         }
 
@@ -34,11 +38,16 @@ namespace AutoGUI
             //popup
             //zapytanie
             //tak/nie, na odpowiedź 5min (sek)
-            string message = "The state of the driver is worsening. Are you able to do it within 5 minutes?";
+            string message = "The state of the driver is worsening. Are you able to intervene within 5 minutes?";
             string title = "Diabetes Alert";
             if(MessageBox.Show(message, title, MessageBoxButton.YesNo) == MessageBoxResult.No)
             {
+                foreach (string num in car.EmergencyPeopleTel)
+                {
+                    Notify(num);
+                }
                 car.DiabetesAlert();
+                Console.Write("abcd");
             }
 
             //MessageBox.Show("The state of the driver is worsening, you have 5 minutes to intervene");

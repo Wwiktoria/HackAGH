@@ -52,11 +52,12 @@ namespace AutoClassLibrary
             Reports = new List<Raport>();
             EmergencyPeopleTel = new List<string>();
         }
-        public Car(string vin, string regnum, string name):this()
+        public Car(string vin, string regnum, string name, List<string> emergencyNumbers):this()
         {
             this.vin = vin;
             this.regnum = regnum;
             this.name = name;
+            this.emergencyPeopleTel = emergencyNumbers;
             speed = 0;
             lights = EnumLights.DRLs;
             emergencyLights = false;
@@ -122,10 +123,10 @@ namespace AutoClassLibrary
             Reports.Add(new Raport(log));
             //doda� raport do sqla
         }
-        public void Notify(string num)
-        {
-            Console.WriteLine($"Send an emergency message {num} at {DateTime.Now.ToString("HH:mm:ss")}");
-        }
+        //public void Notify(string num)
+        //{
+        //    Console.WriteLine($"Sent an emergency message {num} at {DateTime.Now.ToString("HH:mm:ss")}");
+        //}
         public void ShowLocalization()
         {
 
@@ -148,10 +149,11 @@ namespace AutoClassLibrary
             //wysy�a powiadomienie do os�b z listy emergencyPeople
             //lokalizacja
             //data godzina
-            foreach (string num in EmergencyPeopleTel)
-            {
-                Notify(num);
-            }
+            //foreach (string num in EmergencyPeopleTel)
+            //{
+            //    Notify(num);
+            //}
+            //ta część kodu w window
             ShowLocalization();
         }
         public void DiabetesAlert()
@@ -164,10 +166,11 @@ namespace AutoClassLibrary
             //otwieramy drzwi
 
             ShowLocalization();
-            foreach(string num in EmergencyPeopleTel)
-            {
-                Notify(num);
-            }
+            //foreach(string num in EmergencyPeopleTel)
+            //{
+            //    Notify(num);
+            //}
+            //ta część kodu w window
             speed = 0;
             doorsopen = true;
             emergencyLights = true;
