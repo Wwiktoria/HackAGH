@@ -24,6 +24,7 @@ namespace AutoClassLibrary
         private EnumLights lights;
         private bool emergencyLights;
         private bool doorsopen;
+        private List<Raport> raports;
 
         [Key]
         public string Vin { get { return vin; } set { vin = value; } }
@@ -35,8 +36,13 @@ namespace AutoClassLibrary
         public bool Doorsopen { get { return doorsopen; } set { doorsopen = value; } }
         public virtual User User { get; set; }
         public int Email { get; set; }
+        public List<Raport> Raports { get; set; }
 
-        public Car(string vin, string regnum, string name)
+        public Car()
+        {
+            Raports = new List<Raport>();
+        }
+        public Car(string vin, string regnum, string name):this()
         {
             this.vin = vin;
             this.regnum = regnum;
@@ -59,11 +65,15 @@ namespace AutoClassLibrary
         public void ToggleLights(EnumLights type)
         {
             lights = type;
+            string log = $"Changed lights to {type}";
+            Raports.Add(new Raport(log));
+
         }
 
         public void ToggleEmergencyLights()
         {
             emergencyLights = !emergencyLights;
+            string log
         }
 
         public void ToggleDoors()
