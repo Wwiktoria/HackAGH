@@ -1,2 +1,17 @@
 C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.AssemblyReference.cache
 C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\bin\Debug\AutoClassLibrary.dll.config
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\bin\Debug\AutoClassLibrary.dll
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\bin\Debug\AutoClassLibrary.pdb
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\bin\Debug\EntityFramework.dll
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\bin\Debug\EntityFramework.xml
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.CopyComplete
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.dll
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.pdb
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations.Init.resources
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.csproj.GenerateResource.cache
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations._2.resources
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations._3.resources
+C:\Users\couch\source\repos\AutoApp\AutoClassLibrary\obj\Debug\AutoClassLibrary.Migrations._4.resources

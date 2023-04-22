@@ -35,7 +35,7 @@ namespace AutoClassLibrary
         public bool EmergencyLights { get { return emergencyLights; } set { emergencyLights = value; } }
         public bool Doorsopen { get { return doorsopen; } set { doorsopen = value; } }
         public virtual User User { get; set; }
-        public int Email { get; set; }
+        public string UserEmail { get; set; }
         public List<Raport> Raports { get; set; }
 
         public Car()
@@ -73,18 +73,33 @@ namespace AutoClassLibrary
         public void ToggleEmergencyLights()
         {
             emergencyLights = !emergencyLights;
-            string log
+            string log;
+            if (emergencyLights)
+            {
+                log = $"Turned emergency lights ON";
+            }
+            else
+            {
+                log = $"Turned emergency lights OFF";
+            }
+            Raports.Add(new Raport(log));
         }
 
         public void ToggleDoors()
         {
             doorsopen = !doorsopen;
+            string log;
+            if (doorsopen)
+            {
+                log = $"Doors opened";
+            }
+            else
+            {
+                log = $"Doors closed";
+            }
+            Raports.Add(new Raport(log));
         }
 
-        public void blabla()
-        {
-
-        }
     }
 }
 
