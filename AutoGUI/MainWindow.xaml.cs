@@ -47,8 +47,11 @@ namespace AutoGUI
                     Notify(num);
                 }
                 car.DiabetesAlert();
+                imgUnlocked.Visibility = Visibility.Visible;
+                imgTri.Visibility = Visibility.Visible;
+                
             }
-
+            
             //MessageBox.Show("The state of the driver is worsening, you have 5 minutes to intervene");
             //car.DiabetesAlert();
         }
@@ -61,6 +64,7 @@ namespace AutoGUI
             {
                 car.Theft();
                 MessageBox.Show("Your car has been stopped. Be sure to contact the authorities");
+
             }
         }
 

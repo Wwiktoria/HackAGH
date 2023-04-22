@@ -89,7 +89,7 @@
 
                         </Button.Resources>
                         <StackPanel>
-                            <Image Source="Images/Profile1.png" Width="103" Height="76" />
+                            <Image Source="Images/mapa.png" Width="103" Height="76" />
                         </StackPanel>
                     </Button>
 
@@ -125,7 +125,7 @@
             <Label x:Name="lblLights"  HorizontalAlignment="Left" Height="64" Margin="169,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="259" Background="#FFEAE10F" Panel.ZIndex="-1"/>
             <Image x:Name="imgLIghts" Source="Images/Lights.png" Margin="51,150,-51,10" Grid.RowSpan="2" Grid.Row="4" Visibility="Hidden"/>
             <Image x:Name="imgUnlocked" Source="Images/unlocked1.png" Margin="82,24,26,24" Grid.Row="4" Visibility="Hidden"/>
-            <Image x:Name="imgTriangle" Source="Images/16.png" Margin="82,38,26,10" Grid.Row="3" Visibility="Hidden"/>
+            <Image x:Name="imgTri" Source="Images/16.png" Margin="82,38,26,10" Grid.Row="3" Visibility="Hidden"/>
 
 
 

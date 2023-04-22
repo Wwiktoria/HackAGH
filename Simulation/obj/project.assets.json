@@ -69,8 +69,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoGUI\\AutoGUI.csproj": {
-              "projectPath": "C:\\Users\\lenovo\\source\\repos\\HackAGH\\HackAGH\\AutoGUI\\AutoGUI.csproj"
+            "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\AutoGUI.csproj": {
+              "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\AutoGUI\\AutoGUI.csproj"
             }
           }
         }
@@ -121,5 +121,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.105\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Wystąpił problem podczas czytania pliku pamięci podręcznej C:\\Users\\Administrator\\Documents\\GitHub\\HackAGH\\Simulation\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
