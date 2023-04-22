@@ -224,5 +224,27 @@
   <ItemGroup>
     <Resource Include="339865390_198949972910191_7553362764699858970_n.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\App icon.png" />
+    <Resource Include="Images\Car break-in.png" />
+    <Resource Include="Images\Car info.png" />
+    <Resource Include="Images\Diabetes.png" />
+    <Resource Include="Images\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Profile1.png" />
+    <Resource Include="Images\Side car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\10.png" />
+    <Resource Include="Images\11.png" />
+    <Resource Include="Images\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Car break-in1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

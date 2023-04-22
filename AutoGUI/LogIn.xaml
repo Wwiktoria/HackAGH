@@ -27,11 +27,11 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
+              
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                
+
             </Grid.ColumnDefinitions>
             <TextBox x:Name="txtName"
                         VerticalAlignment="Center"
@@ -122,10 +122,88 @@
                 </TextBox.Background>
 
             </TextBox>
+            <TextBox x:Name="txtPassword"
+                        VerticalAlignment="Center"
+                        FontFamily="Fonts/#Dosis"
+                        FontWeight="Bold"
+                        Text="Password"
+                        GotFocus="TextBox_GotFocus"
+                        FontSize="30"
+                        Width="300"
+                        Grid.Row="4"
+                        >
+                <TextBox.Foreground>
+                    <SolidColorBrush Color="#FF222223" Opacity="0.9"/>
+                </TextBox.Foreground>
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="8"/>
+                    </Style>
+                </TextBox.Resources>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </TextBox.Background>
+
+            </TextBox>
+
+            <TextBox x:Name="txtPasswordNext"
+                        VerticalAlignment="Center"
+                        FontFamily="Fonts/#Dosis"
+                        FontWeight="Bold"
+                        Text="Password Again"
+                        GotFocus="TextBox_GotFocus"
+                        FontSize="30"
+                        Width="300"
+                        Grid.Row="5"
+                        >
+                <TextBox.Foreground>
+                    <SolidColorBrush Color="#FF222223" Opacity="0.9"/>
+                </TextBox.Foreground>
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="8"/>
+                    </Style>
+                </TextBox.Resources>
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </TextBox.Background>
+
+            </TextBox>
+            <Button x:Name="btnNext" Content="Next "
+                    Foreground="White"
+                    FontSize="20"
+                    FontWeight="Medium"
+                    Margin="0,10,0,0" Grid.Row="6" Background="#FFC12F2F">
+
+
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts/#Dosis"/>
+                        <Setter Property="Background" Value="#FFFE992E"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter Property="Background" Value="#FFED4443"/>
+                            </Trigger>
+                        </Style.Triggers>
+
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Width="300" Height="40" CornerRadius="12" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
 
         </Grid>
-        
-        
+
+
     </Border>
 
 
