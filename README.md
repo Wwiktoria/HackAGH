@@ -1,6 +1,6 @@
-# AutoSave - a versatile mobile application
+# AutoSave - Your Personal Car Management App
 
-AutoSave is a mobile application that allows users to log in and register to the system. During registration, users are required to provide their car's VIN and registration number.
+AutoSave is a mobile car-management application that allows users to log in and register to the system. During registration, users are required to provide their car's VIN and registration number.
 
 ## Key Features
 
